@@ -32,6 +32,8 @@ class Login extends React.Component {
     this.props.updateState({
       showNav: false,
       showPlayer: false,
+      showBack: true,
+      backTo: '',
       title: 'Sign In'
     });
   }
@@ -66,8 +68,8 @@ class Login extends React.Component {
             fullWidth
           />
         </form>
-        <ActionButton 
-          handleNavButtonClick = { () => this.props.handleNavButtonClick('home') }
+        <ActionButton
+          handleNavButtonClick = { () => this.props.handleNavButtonClick({ route: 'home' }) }
           text = "NEXT"
         />
       </div>

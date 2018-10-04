@@ -14,6 +14,8 @@ class Splash extends React.Component {
     this.props.updateState({
       showNav: false,
       showPlayer: false,
+      showBack: false,
+      backTo: null,
       title: 'Channel Name',
     });
   }
@@ -35,11 +37,11 @@ class Splash extends React.Component {
           <div style={{textAlign: "center", color: "#fff"}}>Powered by Jamm</div>
         </div>
         <ActionButton 
-          handleNavButtonClick = { () => this.props.handleNavButtonClick('login') }
+          handleNavButtonClick = { () => this.props.handleNavButtonClick({ route: 'login' }) }
           text = "Sign in with Jamm"
         />
         <ActionButton 
-          handleNavButtonClick = { () => this.props.handleNavButtonClick('create-account') }
+          handleNavButtonClick = { () => this.props.handleNavButtonClick({ route: 'create-account' }) }
           text = "Create Jamm Account"
         />
       </div>

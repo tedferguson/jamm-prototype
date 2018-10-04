@@ -10,6 +10,8 @@ class HomeMain extends React.Component {
     this.props.updateState({
       showNav: true,
       showPlayer: true,
+      showBack: false,
+      backTo: null,
       title: 'Channel Name', 
     });
   }
@@ -18,14 +20,21 @@ class HomeMain extends React.Component {
     return (
       <div>
         <ul>
-          <li>Featured Exclusives</li>
-          <li>Choice Selections</li>
-          <li>Featured New Releases</li>
-          <li>Featured Stations</li>
+          <li>Fan Level Badge</li>
+          <li>Hero Carousel</li>
+          <li>Check In (if currently at venue)</li>
+          <li>Live Stream (if live stream is currently or imminently available)</li>
+          <li>Early Access (if currently available)</li>
+          <li>Coming Your Way (if upcoming show in user&apos;s area)</li>
+          <li>From the Road (if currently on tour)</li>
+          <li>From the Crowd (if currently on tour)</li>
+          <li>News</li>
+          <li>Exclusives</li>
+          <li>New Music</li>
+          <li>New Videos</li>
           <li>Trending Playlists</li>
-          <li>Recommended Friends</li>
-          <li>Upcoming Concerts</li>
-          <li>Merch Specials</li>
+          <li>Top Merchandise</li>
+          <li>Artist Profile</li>
         </ul>
       </div>
     );

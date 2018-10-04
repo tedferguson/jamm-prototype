@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class NewsMain extends React.Component {
+class FeedMain extends React.Component {
   propTypes: {
     updateState: React.PropTypes.func
   }
@@ -10,7 +10,9 @@ class NewsMain extends React.Component {
     this.props.updateState({
       showNav: true,
       showPlayer: true,
-      title: 'News',
+      showBack: false,
+      backTo: null,
+      title: 'Feed',
     });
   }
 
@@ -18,13 +20,12 @@ class NewsMain extends React.Component {
     return (
       <div>
         <ul>
-          <li>Search News</li>
-          <li>Featured Stories</li>
-          <li>Trending Stories</li>
+          <li>Top Stories</li>
+          <li>Aggregated Feed</li>
         </ul>
       </div>
     );
   }
 };
 
-export default NewsMain;
+export default FeedMain;

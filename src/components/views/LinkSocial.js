@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ActionButton from '../ActionButton';
 
-class LinkAccounts extends React.Component {
+class LinkMusic extends React.Component {
   propTypes: {
     handleNavButtonClick: React.PropTypes.func,
     updateState: React.PropTypes.func
@@ -13,7 +13,9 @@ class LinkAccounts extends React.Component {
     this.props.updateState({
       showNav: false,
       showPlayer: false,
-      title: 'Link Accounts'
+      showBack: true,
+      backTo: 'link-music',
+      title: 'Link Social Accounts'
     });
   }
 
@@ -21,19 +23,7 @@ class LinkAccounts extends React.Component {
     return (
       <div>
         <div style={{textAlign: "center"}}>
-          Jamm requires either a premium Spotify or Apple Music account to play music.
-          Sign in to your account below.
-        </div>
-        <ActionButton 
-          handleNavButtonClick = { null }
-          text = "LINK SPOTIFY"
-        />
-        <ActionButton 
-          handleNavButtonClick = { null }
-          text = "LINK APPLE MUSIC"
-        />
-        <div style={{textAlign: "center"}}>
-          Link your Facebook account to share songs and playlists with friends.
+          Link your social accounts to share songs and playlists with friends.
           Jamm will never post anything without your knowledge.
         </div>
         <ActionButton 
@@ -41,7 +31,15 @@ class LinkAccounts extends React.Component {
           text = "LINK FACEBOOK"
         />
         <ActionButton 
-          handleNavButtonClick = { () => this.props.handleNavButtonClick('rate-artists') }
+          handleNavButtonClick = { null }
+          text = "LINK INSTAGRAM"
+        />
+        <ActionButton 
+          handleNavButtonClick = { null }
+          text = "LINK TWITTER"
+        />
+        <ActionButton 
+          handleNavButtonClick = { () => this.props.handleNavButtonClick({ route: 'home' }) }
           text = "DONE"
         />
       </div>
@@ -49,4 +47,4 @@ class LinkAccounts extends React.Component {
   }
 };
 
-export default LinkAccounts;
+export default LinkMusic;

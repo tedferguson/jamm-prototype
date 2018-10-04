@@ -32,6 +32,8 @@ class CreateAccount extends React.Component {
     this.props.updateState({
       showNav: false,
       showPlayer: false,
+      showBack: true,
+      backTo: '',
       title: 'Create Account'
     });
   }
@@ -78,7 +80,7 @@ class CreateAccount extends React.Component {
         </form>
 
         <ActionButton 
-          handleNavButtonClick = { () => this.props.handleNavButtonClick('account-details') }
+          handleNavButtonClick = { () => this.props.handleNavButtonClick({ route: 'account-details' }) }
           text = "NEXT"
         />
       </div>

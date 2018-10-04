@@ -10,6 +10,8 @@ class MusicMain extends React.Component {
     this.props.updateState({
       showNav: true,
       showPlayer: true,
+      showBack: false,
+      backTo: null,
       title: 'Music',
     });
   }
@@ -20,10 +22,12 @@ class MusicMain extends React.Component {
         <ul>
           <li>Search Music</li>
           <li>Exclusive Songs</li>
-          <li>New Releases</li>
-          <li>Recommended Stations</li>
-          <li>Trending Tracks</li>
-          <li>Browse Artists</li>
+          <li>Trending Songs</li>
+          <li>Featured Albums</li>
+          <li>Artist Playlists</li>
+          <li>Featured Playlists</li>
+          <li>Fan Playlists</li>
+          <li>My Playlists</li>
         </ul>
       </div>
     );

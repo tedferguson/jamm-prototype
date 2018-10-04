@@ -32,6 +32,8 @@ class AccountDetails extends React.Component {
     this.props.updateState({
       showNav: false,
       showPlayer: false,
+      showBack: true,
+      backTo: 'create-account',
       title: 'Account Details',
     });
   }
@@ -97,7 +99,7 @@ class AccountDetails extends React.Component {
           By selecting &quot;Create Account&quot; I agree to the Jamm Music <u>Terms of Service</u> and <u>Privacy Policy</u>
         </div>
         <ActionButton 
-          handleNavButtonClick = { () => this.props.handleNavButtonClick('link-accounts') }
+          handleNavButtonClick = { () => this.props.handleNavButtonClick({ route: 'link-music' }) }
           text = "CREATE ACCOUNT"
         />
       </div>

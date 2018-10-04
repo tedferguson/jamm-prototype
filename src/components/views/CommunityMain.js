@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class SocialMain extends React.Component {
+class CommunityMain extends React.Component {
   propTypes: {
     updateState: React.PropTypes.func
   }
@@ -10,7 +10,8 @@ class SocialMain extends React.Component {
     this.props.updateState({
       showNav: true,
       showPlayer: true,
-      title: 'Social'
+      backTo: null,
+      title: 'Community'
     });
   }
 
@@ -18,15 +19,16 @@ class SocialMain extends React.Component {
     return (
       <div>
         <ul>
+          <li>Fan Wall</li>
           <li>My Friends</li>
           <li>Friends&apos; Playlists</li>
           <li>Trending Playlists</li>
-          <li>Nearby Friends</li>
           <li>Recommended Friends</li>
+          <li>Messages</li>
         </ul>
       </div>
     );
   }
 };
 
-export default SocialMain;
+export default CommunityMain;

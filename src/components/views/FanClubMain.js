@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class VideoMain extends React.Component {
+class FanClubMain extends React.Component {
   propTypes: {
     updateState: React.PropTypes.func
   }
@@ -12,7 +12,7 @@ class VideoMain extends React.Component {
       showPlayer: true,
       showBack: false,
       backTo: null,
-      title: 'Video'
+      title: 'Fan Club',
     });
   }
 
@@ -20,14 +20,15 @@ class VideoMain extends React.Component {
     return (
       <div>
         <ul>
-          <li>Search Video</li>
-          <li>Exclusive Videos</li>
-          <li>Featured Videos</li>
-          <li>Trending Videos</li>
+          <li>Purchase Membership (if the current user is not a member)</li>
+          <li>Early Ticket Access (if there is a current offer)</li>
+          <li>Exclusive Content</li>
+          <li>Exclusive Merchandise</li>
+          <li>Digital Uniques</li>
         </ul>
       </div>
     );
   }
 };
 
-export default VideoMain;
+export default FanClubMain;

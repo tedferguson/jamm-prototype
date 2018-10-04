@@ -10,6 +10,8 @@ class SettingsMain extends React.Component {
     this.props.updateState({
       showNav: true,
       showPlayer: false,
+      showBack: false,
+      backTo: null,
       title: 'Settings',
     });
   }

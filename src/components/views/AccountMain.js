@@ -11,6 +11,8 @@ class AccountMain extends React.Component {
     this.props.updateState({
       showNav: true,
       showPlayer: false,
+      showBack: false,
+      backTo: null,
       title: 'My Account',
     });
   }
@@ -21,12 +23,16 @@ class AccountMain extends React.Component {
         <ul>
           <li>My Profile</li>
           <li>Activity</li>
-          <li>Link Accounts</li>
+          <li>Account Details</li>
           <li>Subscriptions</li>
+          <li>Channel Removed</li>
+          <li>Membership Cancelled</li>
+          <li>Change Password</li>
+          <li>Link Accounts</li>
           <li>Payment Info</li>
           <li>Refill Wallet</li>
-          <li>Change Password</li>
-          <li>Log Out</li>
+          <li>About Jamm</li>
+          <li>Logout</li>
         </ul>
       </div>
     );

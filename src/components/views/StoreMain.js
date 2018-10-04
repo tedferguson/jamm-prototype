@@ -10,7 +10,8 @@ class StoreMain extends React.Component {
     this.props.updateState({
       showNav: true,
       showPlayer: true,
-      title: 'Store',
+      backTo: null,
+      title: 'Merch Store',
     });
   }
 
@@ -18,10 +19,13 @@ class StoreMain extends React.Component {
     return (
       <div>
         <ul>
-          <li>Search Store</li>
+          <li>Top Merch Items</li>
           <li>Merch Specials</li>
-          <li>Browse by Category</li>
-          <li>Browse by Artist</li>
+          <li>CDs &amp; Vinyl</li>
+          <li>Clothing</li>
+          <li>Posters</li>
+          <li>Digital Uniques</li>
+          <li>Other</li>
         </ul>
       </div>
     );
